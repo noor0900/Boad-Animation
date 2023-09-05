@@ -1,0 +1,139 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+.one {
+  position: relative;
+  height: 100vh;
+  width: 100vw;
+  /* border: 1px solid #000; */
+  background-image: linear-gradient(
+    to bottom right,
+    rgba(0, 0, 255, 0.902),
+    rgba(255, 255, 255, 0.969)
+  );
+  overflow: hidden;
+}
+.child {
+  position: absolute;
+  top: 310px;
+  height: 49.9vh;
+  width: 100vw;
+  /* overflow: hidden; */
+  /* border: 1px solid red; */
+  background-image: url(../img/sea.png);
+  background-size: 100% 100%;
+  /* background-repeat: no-repeat; */
+}
+.sun {
+  position: relative;
+  /* border: 1px solid red; */
+  width: 8vw;
+  height: 12vh;
+  left: -120px;
+  background-image: url(../img/sun.png);
+  background-size: 100% 100%;
+  animation: sun 8s;
+  animation-iteration-count: 1;
+}
+@keyframes sun {
+  0% {
+    top: 0;
+    left: -120px;
+  }
+  50% {
+    top: 0px;
+    left: 100px;
+  }
+  100% {
+    top: 0;
+    left: -120px;
+  }
+}
+.cloud {
+  position: absolute;
+  width: 80vw;
+  height: 24vh;
+  left: -100%;
+  top: 80px;
+  animation: cloud 15s linear 8s  forwards; 
+}
+@keyframes cloud {
+0%{
+    left: -100%;
+}
+25%{
+    left: 10%;
+}
+75%{
+    left: 10%;
+}
+100%{
+    left: 100%;
+}
+}
+.img1,.img2,.img3,.img4,.img5{
+    float: left;
+    height:17vh;
+    width: 11vw;
+    background-image: url(../img/cloud.png);
+    background-size: 100% 100%;
+}
+.rain{
+    position: absolute;
+    /* border: 1px solid peru; */
+    height: 75vh;
+    width: 75vw;
+    left: -120%;
+    top: 160px;
+    background-image: url(../img/rain.png);
+    background-size: 100% 100%;
+    animation: rain 16s linear 8s; 
+}
+@keyframes rain {
+    0%{
+        opacity: 0;
+    }
+    20%{
+        opacity: 0;
+        left: 10%;
+    }
+    60%{
+        opacity: 1;
+    }
+    65%{
+        opacity: 0;
+    }
+    100%{
+        left: 10%;
+        opacity: 0;
+    }
+    
+    
+} 
+.boat{
+    position: relative; 
+    height: 30vh;
+    width: 40vw;
+    /* border: 1px solid red; */
+    top: 250px;
+    animation: boat 8s linear infinite;
+}
+@keyframes boat{
+  0%{
+    left:100%;
+    transition-duration: 4s;
+    
+}
+100%{
+    left: -100%;
+    transition-duration: 4s;
+   
+}
+}
+.boat>img{
+  position:absolute;
+  top: -70px;
+  height: 30vh;
+  width: 40vw;
+}
